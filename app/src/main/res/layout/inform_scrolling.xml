@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:paddingBottom="@dimen/common_padding_middle"
+    tools:context=".InformActivity"
+    tools:showIn="@layout/activity_inform">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_padding_middle"
+        android:layout_marginEnd="@dimen/common_padding_middle"
+        android:layout_marginBottom="@dimen/common_padding_middle"
+        android:layout_marginTop="120dp"
+        >
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/tilHin"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/hourIN"-->
+<!--            android:textColorHint="@color/dark_yellow"-->
+<!--            app:hintTextColor="@color/yellow"-->
+<!--            android:textStyle="bold"-->
+<!--            app:boxStrokeColor="@color/yellow"-->
+<!--            app:endIconMode="clear_text"-->
+<!--            app:endIconTint="@color/dark_yellow"-->
+<!--            android:layout_marginEnd="@dimen/common_padding_min"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/tilHout">-->
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/etHin"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="text"-->
+<!--                android:textColor="@color/yellow" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/tilHout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/hourOut"-->
+<!--            android:textColorHint="@color/dark_yellow"-->
+<!--            app:hintTextColor="@color/yellow"-->
+<!--            android:textStyle="bold"-->
+<!--            app:boxStrokeColor="@color/yellow"-->
+<!--            app:endIconMode="clear_text"-->
+<!--            app:endIconTint="@color/dark_yellow"-->
+<!--            android:layout_marginStart="@dimen/common_padding_min"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tilHin"-->
+<!--            app:layout_constraintTop_toTopOf="@id/tilHin"-->
+<!--            app:layout_constraintEnd_toEndOf="parent">-->
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/etHout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:inputType="text"-->
+<!--                android:textColor="@color/yellow" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvNewInf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:clickable="false"
+            android:focusable="false"
+            android:layout_marginTop="@dimen/common_padding_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/btn_user_cancel">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clNewInf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_padding_default">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvNewInf"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_inf"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/squada_one"
+                    android:textColor="@color/dark_blue"
+                    android:textAppearance="?attr/textAppearanceHeadline1"
+                    app:layout_constraintStart_toStartOf="@id/clNewInf"
+                    app:layout_constraintEnd_toEndOf="@id/clNewInf"
+                    app:layout_constraintBottom_toTopOf="@id/infDivider"
+                    android:gravity="center_horizontal"
+                    />
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/infDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:dividerColor="@color/dark_blue"
+                    app:dividerThickness="@dimen/cardview_default_radius"
+                    app:layout_constraintTop_toBottomOf="@id/tvNewInf"
+                    app:layout_constraintStart_toStartOf="@id/clNewInf"
+                    app:layout_constraintEnd_toEndOf="@id/clNewInf"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInf_hour"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    android:hint="@string/new_hour"
+                    android:textColorHint="@color/dark_blue"
+                    app:hintTextColor="@color/dark_blue"
+                    android:textStyle="bold"
+                    app:boxStrokeColor="@color/dark_blue"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/dark_blue"
+                    app:layout_constraintStart_toStartOf="@id/clNewInf"
+                    app:layout_constraintTop_toBottomOf="@id/infDivider"
+                    app:layout_constraintEnd_toEndOf="@id/clNewInf"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInf_hour"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="datetime"
+                        android:onClick="showTimePickerDialog"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:textColor="@color/dark_blue" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilInf_txt"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_min"
+                    android:hint="@string/new_data"
+                    android:textColorHint="@color/dark_blue"
+                    app:hintTextColor="@color/dark_blue"
+                    android:textStyle="bold"
+                    app:boxStrokeColor="@color/dark_blue"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/dark_blue"
+                    app:layout_constraintStart_toStartOf="@id/tilInf_hour"
+                    app:layout_constraintTop_toBottomOf="@id/tilInf_hour"
+                    app:layout_constraintEnd_toEndOf="@id/clNewInf">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etInf_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="160dp"
+                        android:lines="10"
+                        android:minLines="5"
+                        android:maxLines="15"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/dark_blue" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/icNewAddInfo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/common_padding_default"
+                    app:layout_constraintStart_toStartOf="@id/clNewInf"
+                    app:layout_constraintTop_toBottomOf="@id/tilInf_txt"
+                    app:layout_constraintEnd_toEndOf="@id/clNewInf"
+                    android:src="@drawable/ic_add_circle_yellow"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_user_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/user_btn_cancel"
+            android:textColor="@color/blue"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/common_padding_default"
+            android:padding="@dimen/common_padding_min"
+            android:layout_marginEnd="@dimen/common_padding_min"
+            app:layout_constraintStart_toStartOf="@id/cvNewInf"
+            app:layout_constraintTop_toBottomOf="@id/cvNewInf"
+            app:layout_constraintEnd_toStartOf="@id/btn_user_send"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_user_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/user_btn_send"
+            android:textColor="@color/blue"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:padding="@dimen/common_padding_min"
+            android:layout_marginStart="@dimen/common_padding_min"
+            app:layout_constraintEnd_toEndOf="@id/cvNewInf"
+            app:layout_constraintTop_toTopOf="@id/btn_user_cancel"
+            app:layout_constraintStart_toEndOf="@id/btn_user_cancel"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
